@@ -16415,12 +16415,60 @@
     "_name": "TechCrunch",
     ".": [
       {
+        "title": "AI News",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/"
+        ],
+        "target": "/techcrunch/ai"
+      },
+      {
+        "title": "Apps News",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/"
+        ],
+        "target": "/techcrunch/apps"
+      },
+      {
+        "title": "Crypto News",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/"
+        ],
+        "target": "/techcrunch/crypto"
+      },
+      {
         "title": "News",
         "docs": "https://docs.rsshub.app/routes/new-media",
         "source": [
           "/"
         ],
         "target": "/techcrunch/news"
+      },
+      {
+        "title": "Security News",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/"
+        ],
+        "target": "/techcrunch/security"
+      },
+      {
+        "title": "Startups News",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/"
+        ],
+        "target": "/techcrunch/startups"
+      },
+      {
+        "title": "Venture News",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/"
+        ],
+        "target": "/techcrunch/venture"
       }
     ]
   },

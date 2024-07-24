@@ -58705,6 +58705,93 @@
   },
   "techcrunch": {
     "routes": {
+      "/ai": {
+        "path": "/ai",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/techcrunch/ai",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "techcrunch.com/"
+            ]
+          }
+        ],
+        "name": "AI News",
+        "maintainers": [
+          "GoDotDotDot"
+        ],
+        "url": "techcrunch.com/",
+        "location": "ai.ts"
+      },
+      "/apps": {
+        "path": "/apps",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/techcrunch/apps",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "techcrunch.com/"
+            ]
+          }
+        ],
+        "name": "Apps News",
+        "maintainers": [
+          "GoDotDotDot"
+        ],
+        "url": "techcrunch.com/",
+        "location": "app.ts"
+      },
+      "/crypto": {
+        "path": "/crypto",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/techcrunch/crypto",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "techcrunch.com/"
+            ]
+          }
+        ],
+        "name": "Crypto News",
+        "maintainers": [
+          "GoDotDotDot"
+        ],
+        "url": "techcrunch.com/",
+        "location": "crypto.ts"
+      },
       "/news": {
         "path": "/news",
         "categories": [
@@ -58733,6 +58820,93 @@
         ],
         "url": "techcrunch.com/",
         "location": "news.ts"
+      },
+      "/security": {
+        "path": "/security",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/techcrunch/security",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "techcrunch.com/"
+            ]
+          }
+        ],
+        "name": "Security News",
+        "maintainers": [
+          "GoDotDotDot"
+        ],
+        "url": "techcrunch.com/",
+        "location": "security.ts"
+      },
+      "/startups": {
+        "path": "/startups",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/techcrunch/startups",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "techcrunch.com/"
+            ]
+          }
+        ],
+        "name": "Startups News",
+        "maintainers": [
+          "GoDotDotDot"
+        ],
+        "url": "techcrunch.com/",
+        "location": "startup.ts"
+      },
+      "/venture": {
+        "path": "/venture",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/techcrunch/venture",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "techcrunch.com/"
+            ]
+          }
+        ],
+        "name": "Venture News",
+        "maintainers": [
+          "GoDotDotDot"
+        ],
+        "url": "techcrunch.com/",
+        "location": "venture.ts"
       }
     },
     "name": "TechCrunch",

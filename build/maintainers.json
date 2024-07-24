@@ -5728,8 +5728,26 @@
   "/tass/:category?": [
     "TonyRL"
   ],
+  "/techcrunch/ai": [
+    "GoDotDotDot"
+  ],
+  "/techcrunch/apps": [
+    "GoDotDotDot"
+  ],
+  "/techcrunch/crypto": [
+    "GoDotDotDot"
+  ],
   "/techcrunch/news": [
     "EthanWng97"
+  ],
+  "/techcrunch/security": [
+    "GoDotDotDot"
+  ],
+  "/techcrunch/startups": [
+    "GoDotDotDot"
+  ],
+  "/techcrunch/venture": [
+    "GoDotDotDot"
   ],
   "/techflowpost/express": [
     "nczitzk"
