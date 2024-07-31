@@ -4973,6 +4973,9 @@
   "/readwise/list/:routeParams?": [
     "xbot"
   ],
+  "/reddit/r/:community?": [
+    "Questflow"
+  ],
   "/remnote/changelog": [
     "TonyRL",
     "amakerlife"

@@ -13908,6 +13908,19 @@
       }
     ]
   },
+  "reddit.com": {
+    "_name": "Reddit",
+    ".": [
+      {
+        "title": "Reddit Community",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/r/:community"
+        ],
+        "target": "/reddit/r/:community"
+      }
+    ]
+  },
   "remnote.com": {
     "_name": "RemNote",
     ".": [

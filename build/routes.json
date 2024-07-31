@@ -50506,6 +50506,42 @@
     "name": "Readwise",
     "url": "readwise.io"
   },
+  "reddit": {
+    "routes": {
+      "/r/:community?": {
+        "path": "/r/:community?",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/reddit/r/ArtificialInteligence",
+        "parameters": {
+          "community": "reddit community name"
+        },
+        "features": {
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "Reddit Community",
+        "maintainers": [
+          "Questflow"
+        ],
+        "radar": [
+          {
+            "source": [
+              "reddit.com/r/:community"
+            ],
+            "target": "/r/:community"
+          }
+        ],
+        "location": "community.ts"
+      }
+    },
+    "name": "Reddit",
+    "url": "www.reddit.com"
+  },
   "remnote": {
     "routes": {
       "/changelog": {
