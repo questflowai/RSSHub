@@ -36,13 +36,13 @@ async function handler(ctx) {
         title: feed.title,
         link: feed.link,
         item: feed.items.map((item) => ({
-                title: item.title,
-                pubDate: item.pubDate,
-                link: item.link,
-                category: item.categories,
-                description: extractFromHtml(item.content),
-                // @ts-ignore
-                author: item.author as string,
-            })),
+            title: item.title,
+            pubDate: item.pubDate,
+            link: item.link,
+            category: item.categories,
+            description: extractFromHtml(item.content),
+            // @ts-ignore
+            author: item.author as string,
+        })),
     };
 }
