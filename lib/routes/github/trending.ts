@@ -1,3 +1,4 @@
+import extractFromHtml from '@/utils/html-to-md';
 import { Route, ViewType } from '@/types';
 import { getCurrentPath } from '@/utils/helpers';
 const __dirname = getCurrentPath(import.meta.url);
@@ -137,13 +138,15 @@ async function handler(ctx) {
         item: repos.map((r) => ({
             title: r.nameWithOwner,
             author: r.owner,
-            description: art(path.join(__dirname, 'templates/trending-description.art'), {
-                cover: r.openGraphImageUrl,
-                desc: r.description,
-                forks: r.forkCount,
-                lang: r.primaryLanguage?.name || 'Unknown',
-                stars: r.stargazerCount,
-            }),
+            description: extractFromHtml(
+                art(path.join(__dirname, 'templates/trending-description.art'), {
+                    cover: r.openGraphImageUrl,
+                    desc: r.description,
+                    forks: r.forkCount,
+                    lang: r.primaryLanguage?.name || 'Unknown',
+                    stars: r.stargazerCount,
+                })
+            ),
             link: `https://github.com/${r.nameWithOwner}`,
         })),
     };
