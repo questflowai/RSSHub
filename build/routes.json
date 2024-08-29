@@ -69058,8 +69058,8 @@
         ],
         "location": "playlist.ts"
       },
-      "/search_video/:q/:embed?": {
-        "path": "/search_video/:q/:embed?",
+      "/search-video/:q/:embed?": {
+        "path": "/search-video/:q/:embed?",
         "categories": [
           "social-media"
         ],

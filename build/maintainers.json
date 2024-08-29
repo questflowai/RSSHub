@@ -6783,7 +6783,7 @@
   "/youtube/playlist/:id/:embed?": [
     "HenryQW"
   ],
-  "/youtube/search_video/:q/:embed?": [
+  "/youtube/search-video/:q/:embed?": [
     "HenryQW"
   ],
   "/youtube/subscriptions/:embed?": [
