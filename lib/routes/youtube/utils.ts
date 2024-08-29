@@ -91,6 +91,18 @@ export const getChannelWithUsername = (username, part, cache) =>
         );
         return res;
     });
+
+export const searchResultWithKeywords = (keywords, part, options = {}, cache) =>
+    cache.tryGet(`youtube:searchResultWithKeywords:${keywords}`, async () => {
+        const res = await exec((youtube) =>
+            youtube.search.list({
+                part,
+                q: keywords,
+                ...options,
+            })
+        );
+        return res;
+    });
 // not in use
 // export const getVideoAuthor = async (id, part) => {
 //     const res = await exec((youtube) =>
@@ -164,5 +176,6 @@ const youtubeUtils = {
     getSubscriptionsRecusive,
     isYouTubeChannelId,
     getLive,
+    searchResultWithKeywords,
 };
 export default youtubeUtils;
