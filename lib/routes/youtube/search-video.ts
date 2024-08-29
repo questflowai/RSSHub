@@ -6,9 +6,9 @@ import { parseDate } from '@/utils/parse-date';
 import ConfigNotFoundError from '@/errors/types/config-not-found';
 
 export const route: Route = {
-    path: '/search_video/:q/:embed?',
+    path: '/search-video/:q/:embed?',
     categories: ['social-media'],
-    example: '/youtube/search_video/questflow',
+    example: '/youtube/search-video/questflow',
     parameters: { q: 'The q parameter specifies the query term to search for.', embed: 'Default to embed the video, set to any value to disable embedding' },
     features: {
         requireConfig: [
