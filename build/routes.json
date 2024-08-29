@@ -69063,7 +69063,7 @@
         "categories": [
           "social-media"
         ],
-        "example": "/youtube/search_video/questflow",
+        "example": "/youtube/search-video/questflow",
         "parameters": {
           "q": "The q parameter specifies the query term to search for.",
           "embed": "Default to embed the video, set to any value to disable embedding"
