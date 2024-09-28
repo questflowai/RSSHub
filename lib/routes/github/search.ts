@@ -1,8 +1,10 @@
+import * as url from 'node:url';
+import ConfigNotFoundError from '@/errors/types/config-not-found';
 import { DataItem, Route } from '@/types';
 import ofetch from '@/utils/ofetch';
-import * as url from 'node:url';
+import { config } from '@/config';
 
-const host = 'https://github.com';
+const host = 'https://api.github.com';
 
 export const route: Route = {
     path: '/search/:query/:sort?/:order?',
@@ -29,6 +31,9 @@ export const route: Route = {
 };
 
 async function handler(ctx) {
+    if (!config.github || !config.github.access_token) {
+        throw new ConfigNotFoundError('GitHub trending RSS is disabled due to the lack of <a href="https://docs.rsshub.app/deploy/config#route-specific-configurations">relevant config</a>');
+    }
     const query = ctx.req.param('query');
     let sort = ctx.req.param('sort') || 'bestmatch';
     const order = ctx.req.param('order') || 'desc';
@@ -37,27 +42,21 @@ async function handler(ctx) {
         sort = '';
     }
 
-    const suffix = 'search?o='.concat(order, '&q=', encodeURIComponent(query), '&s=', sort, '&type=Repositories');
+    const suffix = 'search/repositories?'.concat(order, '&q=', encodeURIComponent(query), '&s=', sort);
     const link = url.resolve(host, suffix);
     const response = await ofetch(link, {
         headers: {
             accept: 'application/json',
+            Authorization: `bearer ${config.github.access_token}`,
         },
     });
 
-    const out = response.payload.results.map((item) => {
-        const {
-            repo: { repository },
-            hl_trunc_description,
-        } = item;
-
-        return {
-            title: repository.name,
-            author: repository.owner_login,
-            link: host.concat(`/${repository.owner_login}/${repository.name}`),
-            description: hl_trunc_description,
-        } as DataItem;
-    });
+    const out = response.items.map((item) => ({
+            title: item.name,
+            author: item.owner?.login,
+            link: item.html_url,
+            description: item.description,
+        } as DataItem));
 
     return {
         allowEmpty: true,
