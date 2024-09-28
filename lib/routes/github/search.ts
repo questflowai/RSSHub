@@ -51,12 +51,15 @@ async function handler(ctx) {
         },
     });
 
-    const out = response.items.map((item) => ({
-            title: item.name,
-            author: item.owner?.login,
-            link: item.html_url,
-            description: item.description,
-        } as DataItem));
+    const out = response.items.map(
+        (item) =>
+            ({
+                title: item.name,
+                author: item.owner?.login,
+                link: item.html_url,
+                description: item.description,
+            }) as DataItem
+    );
 
     return {
         allowEmpty: true,
