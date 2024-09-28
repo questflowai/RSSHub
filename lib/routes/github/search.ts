@@ -42,12 +42,13 @@ async function handler(ctx) {
         sort = '';
     }
 
-    const suffix = 'search/repositories?'.concat(order, '&q=', encodeURIComponent(query), '&s=', sort);
+    const suffix = 'search/repositories?'.concat('&q=', encodeURIComponent(query), '&sort=', sort, '&order=', order);
     const link = url.resolve(host, suffix);
     const response = await ofetch(link, {
         headers: {
             accept: 'application/json',
             Authorization: `bearer ${config.github.access_token}`,
+            'X-GitHub-Api-Version': '2022-11-28',
         },
     });
 
