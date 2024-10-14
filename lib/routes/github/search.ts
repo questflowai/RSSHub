@@ -47,7 +47,7 @@ async function handler(ctx) {
     const response = await ofetch(link, {
         headers: {
             accept: 'application/json',
-            Authorization: `bearer ${config.github.access_token}`,
+            Authorization: `Bearer ${config.github.access_token}`,
             'X-GitHub-Api-Version': '2022-11-28',
         },
     });
